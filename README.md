@@ -16,6 +16,8 @@ To install the plugin:
 After that, using CsParse is pretty simple.
 
 ```
+var cssString = 'body {color: red;}'
+
 var cssObj =cs.parse(cssString);
 ```
 
