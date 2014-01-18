@@ -21,3 +21,17 @@ cs.parse = function(cssString){
      }
     return cssObj
 }
+
+
+CS.stringify = function(cssObject){
+    var cssString = '';
+    for(var selector in cssObject){
+	var mainObject = cssObject[selector]
+	cssString += selector + ' {\n';
+	for(var field in mainObject){
+	    field + ':' + mainObject[field] + '\n;';
+	}
+	cssString+='}\n';
+    }
+    return cssString;
+}
